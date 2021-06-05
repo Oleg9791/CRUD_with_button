@@ -46,7 +46,7 @@ class Pagination
         $html = <<<EOT
 <nav aria-label="...">
   <ul class="pagination">
-    <li class="page-item disabled">
+    <li class="page-item">
       <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
     </li>
 EOT;
