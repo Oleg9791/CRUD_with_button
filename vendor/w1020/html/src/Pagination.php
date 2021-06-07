@@ -8,6 +8,7 @@ class Pagination
 {
     protected int $pageCount;
     protected int $activePage;
+    protected int $page = 1;
     protected string $urlPrefix = "?page=";
 
     /**
@@ -40,6 +41,27 @@ class Pagination
         return $this;
     }
 
+    public function getNextPage()
+    {
+        $nextUrl = $this->pageCount;
+
+        if ($this->activePage + 1 <= $this->pageCount) {
+            $nextUrl = $this->activePage + 1;
+        }
+        return $nextUrl;
+    }
+
+    public function getNext()
+    {
+        if ($this->activePage == 1) {
+            $nextUrl = 1;
+
+        } elseif ($this->activePage - 1 <= $this->activePage) {
+            $nextUrl = $this->activePage - 1;
+        }
+        return $nextUrl;
+    }
+
 
     public function html()
     {
@@ -47,7 +69,7 @@ class Pagination
 <nav aria-label="...">
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
+      <a class="page-link" href="$this->urlPrefix{$this->getNext()}" tabindex="-1" aria-disabled="true">&laquo;</a>
     </li>
 EOT;
 
@@ -59,7 +81,7 @@ EOT;
 
         $html .= <<<EOT
     <li class="page-item">
-      <a class="page-link" href="#">&raquo;</a>
+      <a class="page-link" href="$this->urlPrefix{$this->getNextPage()}">&raquo;</a>
     </li>
   </ul>
 </nav>
