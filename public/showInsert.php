@@ -8,9 +8,36 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+
+use W1020\Table;
+
+include "../vendor/autoload.php";
+
+$config = [
+    "servername" => "localhost",
+    "username" => "root",
+    "password" => "root",
+    "dbname" => "guestbook",
+    "table" => "ved"
+];
+
+$table = new Table($config);
+$table->setIdName('nomer');
+$comments = $table->columnComments();
+//print_r($col = $table->columns());
+?>
 <form action="insert.php" method="post">
-    <span>fio  </span> <input type="text" class="form-control" name="fio"><br><br>
-    <span>zp  </span><input type="text" class="form-control" name="zp"><br><br>
+    <?php
+    foreach ($table->columns() as $column) {
+        ?>
+        <span><?= $comments[$column] ?>  </span> <input type="text" class="form-control" name="<?= $column ?>"><br><br>
+
+        <?php
+    }
+    ?>
+    <!--    <span>ФИО  </span> <input type="text" class="form-control" name="fio"><br><br>-->
+    <!--    <span>Зарплата  </span><input type="text" class="form-control" name="zp"><br><br>-->
     <input type="submit" value="insert">
 </form>
 </body>

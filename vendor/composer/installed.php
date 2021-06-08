@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '3adc00b358a8b3f7c8ec121136082d46c7f8ed97',
+    'reference' => 'bf6376d1b861d6e72b10b003ea1e67ef50661cc1',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '3adc00b358a8b3f7c8ec121136082d46c7f8ed97',
+      'reference' => 'bf6376d1b861d6e72b10b003ea1e67ef50661cc1',
     ),
     'w1020/html' => 
     array (
@@ -31,12 +31,12 @@
     ),
     'w1020/orm' => 
     array (
-      'pretty_version' => 'v2.1',
-      'version' => '2.1.0.0',
+      'pretty_version' => 'v2.1.7',
+      'version' => '2.1.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c6d080d3258b2e733a6aff64a9ada65f3849ec80',
+      'reference' => 'dd44969121bf3ddad2edb481dd463d742ab1a49e',
     ),
   ),
 );

@@ -27,21 +27,52 @@ $config = [
 ];
 
 $table = new Table($config);
+$comments = $table->columnComments();
+$com = $table->columnCom();
+print_r($com);
 
 $sql = "SELECT * FROM `ved` WHERE `nomer` = $_GET[ins]";
-$row = $table->runSQL($sql);
+$col = "SHOW FULL COLUMNS FROM `ved`;";
+$cols = $table->query($col);
+//print_r($cols);
+
+//$row = $table->runSQL($sql);
 //print_r($row);
 
-foreach ($row as $res) {
-    $result = $res;
-}
+//foreach ($row as $res) {
+//    $result = $res;
+//}
 //print_r($result);
+//$val = [];
+$string = [];
+
+foreach ($cols as $value) {
+
+    $val = $value;
+//    foreach ($val as $item) {
+//        if ($item == $item['Field']) {
+//            $string[] = $item['Field'];
+//        }
+//    }
+}
+//print_r($val);
 ?>
 
 <form action="update.php" method="post">
-    <input type="hidden" name="nomer" value="<?= $result['nomer'] ?>">
-    <span>fio  </span> <input type="text" class="form-control" name="fio" value="<?= $result['fio'] ?>"><br><br>
-    <span>zp  </span><input type="text" class="form-control" name="zp" value="<?= $result['zp'] ?>"><br><br>
+    <?php
+    foreach ($table->columns() as $column) {
+        ?>
+        <span><?= $comments[$column] ?>  </span> <input type="text" class="form-control" name="<?= $column ?>"><br><br>
+
+        <?php
+    }
+    ?>
+
+    <!--    <input type="hidden" name="nomer" value="--><? //= $result['nomer'] ?><!--">-->
+    <!--    <span>fio  </span> <input type="text" class="form-control" name="fio" value="-->
+    <? //= $result['fio'] ?><!--"><br><br>-->
+    <!--    <span>zp  </span><input type="text" class="form-control" name="zp" value="-->
+    <? //= $result['zp'] ?><!--"><br><br>-->
     <input type="submit" value="insert">
 </form>
 </body>
