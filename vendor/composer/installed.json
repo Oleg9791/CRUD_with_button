@@ -2,20 +2,20 @@
     "packages": [
         {
             "name": "w1020/html",
-            "version": "v0.0.4",
-            "version_normalized": "0.0.4.0",
+            "version": "v0.0.5",
+            "version_normalized": "0.0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rustam-petr/html.git",
-                "reference": "9fbfde8ef89f182378dcc0752f086a69e7bf41bf"
+                "reference": "4d8889bccda6cff74ab6e9119ecaef5c8c9a7904"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rustam-petr/html/zipball/9fbfde8ef89f182378dcc0752f086a69e7bf41bf",
-                "reference": "9fbfde8ef89f182378dcc0752f086a69e7bf41bf",
+                "url": "https://api.github.com/repos/rustam-petr/html/zipball/4d8889bccda6cff74ab6e9119ecaef5c8c9a7904",
+                "reference": "4d8889bccda6cff74ab6e9119ecaef5c8c9a7904",
                 "shasum": ""
             },
-            "time": "2021-06-04T17:41:25+00:00",
+            "time": "2021-06-08T16:11:39+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -29,7 +29,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rustam-petr/html/issues",
-                "source": "https://github.com/rustam-petr/html/tree/v0.0.4"
+                "source": "https://github.com/rustam-petr/html/tree/v0.0.5"
             },
             "install-path": "../w1020/html"
         },
