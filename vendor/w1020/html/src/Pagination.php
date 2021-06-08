@@ -51,7 +51,7 @@ class Pagination
         return $nextUrl;
     }
 
-    public function getNext()
+    public function getPreviousPage()
     {
         if ($this->activePage == 1) {
             $nextUrl = 1;
@@ -69,7 +69,7 @@ class Pagination
 <nav aria-label="...">
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link" href="$this->urlPrefix{$this->getNext()}" tabindex="-1" aria-disabled="true">&laquo;</a>
+      <a class="page-link" href="$this->urlPrefix{$this->getPreviousPage()}" tabindex="-1" aria-disabled="true">&laquo;</a>
     </li>
 EOT;
 
