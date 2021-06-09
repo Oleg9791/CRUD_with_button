@@ -91,17 +91,25 @@ class Table extends CRUD
         return $result;
     }
 
-    public function columnCom(): array
+//    public function columnCom(): array
+//    {
+//        $table = $this->query(
+//            "SHOW FULL COLUMNS FROM `$this->tableName`;"
+//        );
+//        $result = [];
+//        foreach ($table as $field) {
+//
+//            $result[] = $field['Field'];
+//
+//        }
+//        return $result;
+//
+//    }
+
+    public function getById(int $id): array
     {
-        $table = $this->query(
-            "SHOW FULL COLUMNS FROM `$this->tableName`;"
-        );
-        $result = [];
-        foreach ($table as $field) {
-
-            $result[] = $field['Field'];
-
-        }
+        $result = $this->query(
+            "SELECT * FROM $this->tableName WHERE $this->idName=$id");
         return $result;
 
     }

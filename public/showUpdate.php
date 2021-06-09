@@ -27,54 +27,40 @@ $config = [
 ];
 
 $table = new Table($config);
+$table->setIdName('nomer');
 $comments = $table->columnComments();
-$com = $table->columnCom();
-print_r($com);
+$id = (int)($_GET['ins'] ?? 1);
+$valueArr = $table->getById($id);
+print_r($valueArr);
 
-$sql = "SELECT * FROM `ved` WHERE `nomer` = $_GET[ins]";
-$col = "SHOW FULL COLUMNS FROM `ved`;";
-$cols = $table->query($col);
-//print_r($cols);
-
-//$row = $table->runSQL($sql);
-//print_r($row);
-
-//foreach ($row as $res) {
-//    $result = $res;
-//}
-//print_r($result);
-//$val = [];
-$string = [];
-
-foreach ($cols as $value) {
-
-    $val = $value;
-//    foreach ($val as $item) {
-//        if ($item == $item['Field']) {
-//            $string[] = $item['Field'];
-//        }
-//    }
-}
-//print_r($val);
+//$com = $table->columnCom();
 ?>
-
 <form action="update.php" method="post">
+
+
+    <input type="hidden" name="<?= $table->getIdName() ?>" value="<?=$id?>">
+
     <?php
+
     foreach ($table->columns() as $column) {
         ?>
-        <span><?= $comments[$column] ?>  </span> <input type="text" class="form-control" name="<?= $column ?>"><br><br>
+
+        <span><?= $comments[$column] ?>  </span> <input type="text" class="form-control" name="<?= $column ?>"
+                                                        value="<?= $valueArr[0][$column] ?>"><br><br>
 
         <?php
     }
     ?>
+<!--    <input type="hidden" name="nomer" value="--><?//= $result['nomer'] ?><!--">-->
+<!--    <span>fio  </span> <input type="text" class="form-control" name="fio" value="--><?//= $result['fio'] ?><!--"><br><br>-->
+<!--    <span>zp  </span><input type="text" class="form-control" name="zp" value="--><?//= $result['zp'] ?><!--"><br><br>-->
 
-    <!--    <input type="hidden" name="nomer" value="--><? //= $result['nomer'] ?><!--">-->
-    <!--    <span>fio  </span> <input type="text" class="form-control" name="fio" value="-->
-    <? //= $result['fio'] ?><!--"><br><br>-->
-    <!--    <span>zp  </span><input type="text" class="form-control" name="zp" value="-->
-    <? //= $result['zp'] ?><!--"><br><br>-->
+    <!--    <span>ФИО  </span> <input type="text" class="form-control" name="fio"><br><br>-->
+    <!--    <span>Зарплата  </span><input type="text" class="form-control" name="zp"><br><br>-->
     <input type="submit" value="insert">
 </form>
+
+
 </body>
 </html>
 

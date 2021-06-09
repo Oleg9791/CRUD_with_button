@@ -25,7 +25,10 @@ $config = [
 $table = new Table($config);
 $table->setIdName('nomer');
 $comments = $table->columnComments();
-//print_r($col = $table->columns());
+print_r($col = $table->columns());
+print_r($col = $table->columnsInfo());
+print_r($comments = $table->columnComments());
+print_r($comment = $table->getById(73));
 ?>
 <form action="insert.php" method="post">
     <?php

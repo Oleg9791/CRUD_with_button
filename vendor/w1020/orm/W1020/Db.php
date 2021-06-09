@@ -28,7 +28,7 @@ class Db
             }
             return $res;
         } else {
-            throw new \Exception('Ошибка выполнения sql запроса');
+            throw new \Exception('Ошибка выполнения sql запроса'.$sql);
         }
 //        return $result;
     }
