@@ -23,10 +23,6 @@ if (isset($_GET['del'])) {
     header("Location: ?");
 }
 
-//$arrSQL = $table->getPage($page);
-
-//$htmlTable = new htmlTable();
-//$pagination = new Pagination();
 ?>
 <!doctype html>
 <html lang="en">

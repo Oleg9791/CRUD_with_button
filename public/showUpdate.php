@@ -31,9 +31,7 @@ $table->setIdName('nomer');
 $comments = $table->columnComments();
 $id = (int)($_GET['ins'] ?? 1);
 $valueArr = $table->getById($id);
-print_r($valueArr);
 
-//$com = $table->columnCom();
 ?>
 <form action="update.php" method="post">
 
@@ -51,12 +49,6 @@ print_r($valueArr);
         <?php
     }
     ?>
-<!--    <input type="hidden" name="nomer" value="--><?//= $result['nomer'] ?><!--">-->
-<!--    <span>fio  </span> <input type="text" class="form-control" name="fio" value="--><?//= $result['fio'] ?><!--"><br><br>-->
-<!--    <span>zp  </span><input type="text" class="form-control" name="zp" value="--><?//= $result['zp'] ?><!--"><br><br>-->
-
-    <!--    <span>ФИО  </span> <input type="text" class="form-control" name="fio"><br><br>-->
-    <!--    <span>Зарплата  </span><input type="text" class="form-control" name="zp"><br><br>-->
     <input type="submit" value="insert">
 </form>
 

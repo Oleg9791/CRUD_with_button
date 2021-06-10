@@ -25,10 +25,6 @@ $config = [
 $table = new Table($config);
 $table->setIdName('nomer');
 $comments = $table->columnComments();
-print_r($col = $table->columns());
-print_r($col = $table->columnsInfo());
-print_r($comments = $table->columnComments());
-print_r($comment = $table->getById(73));
 ?>
 <form action="insert.php" method="post">
     <?php
@@ -39,8 +35,6 @@ print_r($comment = $table->getById(73));
         <?php
     }
     ?>
-    <!--    <span>ФИО  </span> <input type="text" class="form-control" name="fio"><br><br>-->
-    <!--    <span>Зарплата  </span><input type="text" class="form-control" name="zp"><br><br>-->
     <input type="submit" value="insert">
 </form>
 </body>

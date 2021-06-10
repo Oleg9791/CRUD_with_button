@@ -15,5 +15,4 @@ $config = [
 $table = new Table($config);
 
 $table->ins($_POST);
-//print_r($_POST);
 header("Location: index.php");
