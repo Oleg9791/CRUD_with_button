@@ -35,20 +35,20 @@
         },
         {
             "name": "w1020/orm",
-            "version": "v2.1.7",
-            "version_normalized": "2.1.7.0",
+            "version": "v2.1.9",
+            "version_normalized": "2.1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HannaLuniova/ORM.git",
-                "reference": "dd44969121bf3ddad2edb481dd463d742ab1a49e"
+                "reference": "1d36fdfaf4cf427840c11fa4db9f07b44e2dc7f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HannaLuniova/ORM/zipball/dd44969121bf3ddad2edb481dd463d742ab1a49e",
-                "reference": "dd44969121bf3ddad2edb481dd463d742ab1a49e",
+                "url": "https://api.github.com/repos/HannaLuniova/ORM/zipball/1d36fdfaf4cf427840c11fa4db9f07b44e2dc7f1",
+                "reference": "1d36fdfaf4cf427840c11fa4db9f07b44e2dc7f1",
                 "shasum": ""
             },
-            "time": "2021-06-08T17:48:58+00:00",
+            "time": "2021-06-11T16:36:13+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -63,7 +63,7 @@
             "description": "ORM",
             "support": {
                 "issues": "https://github.com/HannaLuniova/ORM/issues",
-                "source": "https://github.com/HannaLuniova/ORM/tree/v2.1.7"
+                "source": "https://github.com/HannaLuniova/ORM/tree/v2.1.9"
             },
             "install-path": "../w1020/orm"
         }

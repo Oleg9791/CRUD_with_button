@@ -45,10 +45,22 @@ class CRUD extends Db
 
     /** читает данные из таблицы
      * @return array
+     * @throws \Exception
      */
     public function get(): array
     {
         return $this->query("SELECT * FROM $this->tableName;");
+    }
+
+    /**
+     * @param int $id
+     * @return array
+     * @throws \Exception
+     */
+    public function getRow(int $id): array
+    {
+        return $this->query(
+            "SELECT * FROM $this->tableName WHERE $this->idName=$id")[0];
     }
 
     /** удаляет строку из таблицы
@@ -94,4 +106,5 @@ class CRUD extends Db
 
         return $this->runSQL($sql);
     }
+
 }

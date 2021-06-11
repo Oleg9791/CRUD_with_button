@@ -20,7 +20,7 @@ $table->setPageSize(3)->setIdName("nomer");
 $page = (int)($_GET['page'] ?? 1);
 if (isset($_GET['del'])) {
     $table->del($_GET['del']);
-    header("Location: ?");
+    header("Location: ?page=" . min($_GET["page"], $table->pageCount()));
 }
 
 ?>
@@ -39,8 +39,8 @@ if (isset($_GET['del'])) {
 <body>
 <?= (new htmlTable())
     ->setData($table->getPage($page))
-    ->addColumn(fn($v) => "<a href='?del=$v[nomer]'>Delete</a>")
-    ->addColumn(fn($v) => "<a href='showUpdate.php?ins=$v[nomer]'>Edit</a>")
+    ->addColumn(fn($v) => "<a href='?del=$v[nomer]&page=$page'>Delete</a>")
+    ->addColumn(fn($v) => "<a href='showUpdate.php?ins=$v[nomer]&page=$page'>Edit</a>")
     ->setClass("table table-success table-striped")
     ->html() ?>
 <a class='btn btn-primary' href='showInsert.php'>Insert</a><br><br>

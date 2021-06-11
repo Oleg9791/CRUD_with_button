@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'bf6376d1b861d6e72b10b003ea1e67ef50661cc1',
+    'reference' => '030ac134723cf2028222d1757d5692c50dd54ff0',
     'name' => '__root__',
   ),
   'versions' => 
@@ -44,7 +44,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'bf6376d1b861d6e72b10b003ea1e67ef50661cc1',
+      'reference' => '030ac134723cf2028222d1757d5692c50dd54ff0',
     ),
     'w1020/html' => 
     array (
@@ -57,12 +57,12 @@ private static $installed = array (
     ),
     'w1020/orm' => 
     array (
-      'pretty_version' => 'v2.1.7',
-      'version' => '2.1.7.0',
+      'pretty_version' => 'v2.1.9',
+      'version' => '2.1.9.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'dd44969121bf3ddad2edb481dd463d742ab1a49e',
+      'reference' => '1d36fdfaf4cf427840c11fa4db9f07b44e2dc7f1',
     ),
   ),
 );

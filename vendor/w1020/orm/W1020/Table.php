@@ -90,13 +90,4 @@ class Table extends CRUD
         }
         return $result;
     }
-
-
-    public function getById(int $id): array
-    {
-        $result = $this->query(
-            "SELECT * FROM $this->tableName WHERE $this->idName=$id");
-        return $result;
-
-    }
 }

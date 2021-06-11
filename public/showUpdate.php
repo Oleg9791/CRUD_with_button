@@ -30,29 +30,20 @@ $table = new Table($config);
 $table->setIdName('nomer');
 $comments = $table->columnComments();
 $id = (int)($_GET['ins'] ?? 1);
-$valueArr = $table->getById($id);
+$valueArr = $table->getRow($id);
 
 ?>
-<form action="update.php" method="post">
-
-
-    <input type="hidden" name="<?= $table->getIdName() ?>" value="<?=$id?>">
-
+<form action="update.php?page=<?=$_GET["page"]?>" method="post">
+    <input type="hidden" name="<?= $table->getIdName() ?>" value="<?= $id ?>">
     <?php
-
     foreach ($table->columns() as $column) {
-        ?>
-
-        <span><?= $comments[$column] ?>  </span> <input type="text" class="form-control" name="<?= $column ?>"
-                                                        value="<?= $valueArr[0][$column] ?>"><br><br>
-
+        ?><span><?= $comments[$column] ?></span><input type="text" class="form-control" name="<?= $column ?>"
+                                                       value="<?= $valueArr[$column] ?>"><br><br>
         <?php
     }
     ?>
     <input type="submit" value="insert">
 </form>
-
-
 </body>
 </html>
 

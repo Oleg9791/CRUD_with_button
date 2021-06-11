@@ -16,4 +16,4 @@ $table = new Table($config);
 
 $table->setIdName('nomer')->upd($_POST['nomer'], $_POST);
 
-header("Location: index.php");
+header("Location:index.php?page=" . $_GET["page"]);
